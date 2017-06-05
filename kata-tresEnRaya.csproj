@@ -62,7 +62,13 @@
       <DependentUpon>TresEnRayaFase1.feature</DependentUpon>
     </Compile>
     <Compile Include="Entities\Board.cs" />
+    <Compile Include="Scenarios\TresEnRayaFase2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TresEnRayaFase2.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\TresEnRayaFase1Steps.cs" />
+    <Compile Include="Steps\TresEnRayaFase2Steps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +76,10 @@
     <None Include="Scenarios\TresEnRayaFase1.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>TresEnRayaFase1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Scenarios\TresEnRayaFase2.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TresEnRayaFase2.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup />

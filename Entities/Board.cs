@@ -8,6 +8,8 @@ namespace kata_tresEnRaya.Entities
 {
     public class Board:List<Cell>
     {
+        public Piece LastPiece { get; set; }
+
         public Board(int _length, int _width)
         {
             for (int x = 0; x < _length; x++)
@@ -22,7 +24,15 @@ namespace kata_tresEnRaya.Entities
         {
             try
             {
-                this.Find(x => x.PosX.Equals(_posX) & x.PosY.Equals(_posY)).Piece = _piece;
+                if (PositonOccuped(_posX, _posY))
+                {
+                    throw new Exception();
+                }
+                else if (LastPiece != null && LastPiece.Color.Equals(_piece.Color))
+                {
+                    throw new Exception();
+                }
+                this.Find(x => x.PosX.Equals(_posX) & x.PosY.Equals(_posY)).Piece = LastPiece = _piece;
             }
             catch (Exception exc)
             {

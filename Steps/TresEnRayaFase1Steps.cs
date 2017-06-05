@@ -11,7 +11,7 @@ namespace kata_tresEnRaya.Steps
         private Board _board;
         private Pieces _pieces;
 
-        [Given(@"I have a empty 3x3 table")]
+        [Given(@"I have a empty 3x3 table"), Scope(Tag = "TresEnRayaFase1")]
         public void GivenIHaveAEmptyTable()
         {
             _board = new Board(3,3);
