@@ -10,8 +10,8 @@ namespace kata_tresEnRaya.Steps
     {
         private Board _board;
 
-        [Given(@"I have a empty 3x3 board"), Scope(Tag = "TresEnRayaFase2")]
-        public void GivenIHaveAEmptyBoard()
+        [Given(@"I have a empty (.*) board"), Scope(Tag = "TresEnRayaFase2")]
+        public void GivenIHaveAEmptyBoard(string p0)
         {
             _board = new Board(3,3);
         }
